@@ -41,5 +41,6 @@ await using (var ctx = new TestDbContext())
 
 await using (var ctx = new TestDbContext())
 {
+    // No problem with 'AsNoTracking'
     var parent = await ctx.Parents.Include(p => p.Childs).FirstOrDefaultAsync();
 }
